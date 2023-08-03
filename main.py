@@ -40,7 +40,8 @@ class Converter:
 																	 fg=button_fg,
 																	 font=button_font,
 																	 wrap=100,
-																	 width=12)
+																	 width=12,
+																	 command=self.New_Player)
 		self.New_Player_Button.grid(row=0, column=1, padx=5, pady=5)
 
 		self.Returning_Player_Button = Button(self.button_frame,
@@ -49,8 +50,26 @@ class Converter:
 																	 fg=button_fg,
 																	 font=button_font,
 																	 wrap=110,
-																	 width=12)
+																	 width=12,
+																	 state=DISABLED)
 		self.Returning_Player_Button.grid(row=0, column=2, padx=5, pady=5)
+
+	@staticmethod
+	def New_Player ():
+		DisplayINST()
+
+class DisplayINST:
+
+	def __init__(self):
+		background = "#FFE6CC"
+
+		self.INST_box = Toplevel()
+
+		self.INST_frame = Frame(self.INST_box,
+													 width=300,
+													 height=200,
+													 bg=background)
+		self.INST_frame.grid()
 # Main Routine
 if __name__ == "__main__":
 	root = Tk()
