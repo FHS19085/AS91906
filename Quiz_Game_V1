@@ -53,37 +53,23 @@ class Converter:
 																	 width=12,
 																	 state=DISABLED)
 		self.Returning_Player_Button.grid(row=0, column=2, padx=5, pady=5)
-	# Beginning of Instructions
+
 	@staticmethod
 	def New_Player ():
 		DisplayINST()
 
 class DisplayINST:
-	
+
 	def __init__(self):
 		background = "#FFE6CC"
-		INST_TXT = ""
+
 		self.INST_box = Toplevel()
 
 		self.INST_frame = Frame(self.INST_box,
 													 width=300,
 													 height=200,
-													 bg=background,)
-		self.INST_frame.grid()
-		# Instructions title and text
-		self.INST_title = Label(self.INST_frame,
-													 text=("Instructions"),
-													 font=("Arial","16","bold"),
 													 bg=background)
-		self.INST_title.grid(row=0)
-
-		self.INST_text = Label(self.INST_frame,
-													text="TEST",
-													wrap=322,
-													width=40,
-													justify="center",
-													bg=background)
-		self.INST_text.grid(row=1)
+		self.INST_frame.grid()
 # Main Routine
 if __name__ == "__main__":
 	root = Tk()
